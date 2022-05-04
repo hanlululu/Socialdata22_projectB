@@ -2,7 +2,9 @@
 # coding: utf-8
 
 # # **CO2 emissions and climate change** 
-# ### <br>Delving into the past, present and future responsibilities<br>  
+# ### <br>The past, present and future responsibilities<br>  
+
+# 
 
 # In[1]:
 
@@ -23,7 +25,7 @@ import numpy as np
 pio.renderers.default = 'notebook'
 
 
-# In[2]:
+# In[19]:
 
 
 def country_to_continent(country_code):
@@ -37,7 +39,7 @@ def country_to_continent(country_code):
     return country_continent_name
 
 
-# In[3]:
+# In[20]:
 
 
 df = pd.read_csv('data/owid-co2-data.csv',sep = ',',encoding = 'unicode_escape')
@@ -45,7 +47,7 @@ df = df.fillna(0)
 temp = df[['iso_code', 'country', 'year', 'co2','energy_per_gdp', 'co2_per_capita','primary_energy_consumption','gdp','co2_per_gdp']] 
 
 
-# In[4]:
+# In[21]:
 
 
 df_sector = pd.read_csv('data/co-emissions-by-sector.csv',sep = ',',encoding = 'unicode_escape')
@@ -53,7 +55,7 @@ df_sector = df_sector.fillna(0)
 df_sector['Continent'] = df_sector['Code'].apply(lambda x: country_to_continent(x))
 
 
-# In[5]:
+# In[22]:
 
 
 df_sector_18 = df_sector[(df_sector['Year'] == 2018) & ~(df_sector['Continent'].isin([0,'TLS','OWID_WRL']))]
@@ -63,7 +65,7 @@ df_sun = df_sector_18[~df_sector_18[['Buildings', 'Industry',
        'Electricity and heat']].eq(0).all(axis = 1)].drop(columns = ["Year","Code","Land-use change and forestry"])
 
 
-# In[6]:
+# In[23]:
 
 
 df_sun2 = df_sun.melt(id_vars=["Entity","Continent"], 
@@ -76,7 +78,7 @@ fig.update_traces(textinfo="label+percent entry ")
 fig.show()
 
 
-# In[7]:
+# In[12]:
 
 
 mask = (temp['year'] > 1990) & (temp['country'].isin(['Asia','Europe','Oceania','Africa',
@@ -89,14 +91,14 @@ mask3 = (temp['year'] > 1990) & (temp['country'].isin(['China','United States','
                                                       'India','Germany','United Kingdom','Saudi Arabia']))
 
 
-# In[8]:
+# In[13]:
 
 
 cont_co2 = temp[mask2]
 cont_co22 = temp[mask]
 
 
-# In[9]:
+# In[14]:
 
 
 fig = px.choropleth(cont_co2, locations="iso_code", color="co2", hover_name="country", animation_frame="year",
@@ -108,7 +110,7 @@ fig.layout.updatemenus[0].buttons[0].args[1]['transition']['duration'] = 10
 fig.show()
 
 
-# In[10]:
+# In[15]:
 
 
 fig = px.choropleth(cont_co2, locations="iso_code", color="co2_per_capita", hover_name="country", animation_frame="year",
@@ -120,7 +122,7 @@ fig.layout.updatemenus[0].buttons[0].args[1]['transition']['duration'] = 10
 fig.show()
 
 
-# In[11]:
+# In[154]:
 
 
 temp = cont_co2[cont_co2['country'].isin(['China','India','United States','Germany','Saudi Arabia'])]
@@ -128,7 +130,7 @@ fig = px.scatter(temp, x="primary_energy_consumption", y="co2", color='country',
 fig.show()
 
 
-# In[12]:
+# In[146]:
 
 
 df2 = px.data.gapminder()
@@ -141,7 +143,7 @@ fig.layout.updatemenus[0].buttons[0].args[1]['transition']['duration'] = 10
 fig.show()
 
 
-# In[13]:
+# In[156]:
 
 
 df.describe()
