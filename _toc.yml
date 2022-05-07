@@ -4,9 +4,9 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
+#- file: markdown
 - file: keyplots_globalwarm
 - file: CO2
 - file: CO2 - Responsibility
-- file: notebooks
-- file: markdown-notebooks
+#- file: notebooks
+#- file: markdown-notebooks
