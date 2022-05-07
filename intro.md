@@ -1,4 +1,4 @@
-# Climate Change Visualisations
+# **Climate Change Visualisations**
 
 Welcome to a little world of visualisations on the most important topic of the 21st century: **Climate Change**.
 
