@@ -9,5 +9,3 @@ We invite you to begin your exploration:
 ```
 
 ![](https://upload.wikimedia.org/wikipedia/commons/7/7e/The_Earth_seen_from_Apollo_17_with_white_background.jpg)
-
-
