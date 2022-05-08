@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Climate Change - impact and causes
-author: Kathrine ...... , David Ribberholt Ipsen, Hanlu .......
-logo: logo2.png
+title: Climate Change
+author: Kathrine Schultz-Nielsen, David Ribberholt Ipsen, Hanlu He
+logo: logo2.jpeg
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
