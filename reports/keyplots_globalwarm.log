@@ -1,0 +1,61 @@
+Traceback (most recent call last):
+  File "/opt/homebrew/Caskroom/miniforge/base/envs/cforge_env/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/opt/homebrew/Caskroom/miniforge/base/envs/cforge_env/lib/python3.9/site-packages/nbclient/client.py", line 1112, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/homebrew/Caskroom/miniforge/base/envs/cforge_env/lib/python3.9/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/opt/homebrew/Caskroom/miniforge/base/envs/cforge_env/lib/python3.9/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/homebrew/Caskroom/miniforge/base/envs/cforge_env/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/opt/homebrew/Caskroom/miniforge/base/envs/cforge_env/lib/python3.9/site-packages/nbclient/client.py", line 553, in async_execute
+    await self.async_execute_cell(
+  File "/opt/homebrew/Caskroom/miniforge/base/envs/cforge_env/lib/python3.9/site-packages/nbclient/client.py", line 857, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/opt/homebrew/Caskroom/miniforge/base/envs/cforge_env/lib/python3.9/site-packages/nbclient/client.py", line 760, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+## MAGIC - 3
+
+### 2. Temp vs CO2
+# co2 = pd.read_csv('../data/annual-co-emissions-by-region.csv')
+# co2 = co2.rename(columns={'Annual CO2 emissions (zero filled)': "Annual CO2 emissions (tons)"})
+# co2 = co2.loc[co2['Entity'] == 'World']
+# co2 = co2.sort_values('Year')
+# meantemp1900co2 = pd.merge(meantemp1900, co2, left_on="Year", right_on="Year", how='inner')
+# meantemp1900co2 = meantemp1900co2.rename(columns={'AverageTemperature': "Average Temperature (C)"})
+
+# fig = px.scatter(meantemp1900co2, x="Annual CO2 emissions (tons)", y="Average Temperature (C)",
+#     color="Year", color_continuous_scale="balance",
+#     trendline="ols", trendline_color_override="black", title="Global temperature vs annual CO2")
+# fig.show()
+
+## Dubplicate plot, but with CUMULATIVE CO2 (BETTER)
+co2cum = pd.read_csv('/Users/davidipsen/Documents/DTU/4. Semester (MSc)/Social Data Analysis & Viz/GlobalWarmingVisualised/data/cumulative-co2-emissions-region.csv')
+co2cum = co2cum.rename(columns={'Cumulative CO2 emissions (zero filled)': "Cumulative CO2 emissions (tons)"})
+co2cum = co2cum.loc[co2cum['Entity'] == 'World']
+co2cum = co2cum.sort_values('Year')
+meantemp1900co2cum = pd.merge(meantemp1900, co2cum, left_on="Year", right_on="Year", how='inner')
+meantemp1900co2cum = meantemp1900co2cum.rename(columns={'AverageTemperature': "Average Temperature (C)"})
+
+fig = px.scatter(meantemp1900co2cum, x="Cumulative CO2 emissions (tons)", y="Average Temperature (C)",
+    color="Year", color_continuous_scale="balance",
+    trendline="ols", trendline_color_override="black", title="Global temperature vs. cumulated CO2")
+fig.show()
+
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m/var/folders/wv/j_lqm8yn4ndb1hvhthjcrb540000gn/T/ipykernel_15833/3675455644.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     19[0m [0mco2cum[0m [0;34m=[0m [0mco2cum[0m[0;34m.[0m[0mloc[0m[0;34m[[0m[0mco2cum[0m[0;34m[[0m[0;34m'Entity'[0m[0;34m][0m [0;34m==[0m [0;34m'World'[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m     20[0m [0mco2cum[0m [0;34m=[0m [0mco2cum[0m[0;34m.[0m[0msort_values[0m[0;34m([0m[0;34m'Year'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 21[0;31m [0mmeantemp1900co2cum[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mmerge[0m[0;34m([0m[0mmeantemp1900[0m[0;34m,[0m [0mco2cum[0m[0;34m,[0m [0mleft_on[0m[0;34m=[0m[0;34m"Year"[0m[0;34m,[0m [0mright_on[0m[0;34m=[0m[0;34m"Year"[0m[0;34m,[0m [0mhow[0m[0;34m=[0m[0;34m'inner'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     22[0m [0mmeantemp1900co2cum[0m [0;34m=[0m [0mmeantemp1900co2cum[0m[0;34m.[0m[0mrename[0m[0;34m([0m[0mcolumns[0m[0;34m=[0m[0;34m{[0m[0;34m'AverageTemperature'[0m[0;34m:[0m [0;34m"Average Temperature (C)"[0m[0;34m}[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     23[0m [0;34m[0m[0m
+
+[0;31mNameError[0m: name 'meantemp1900' is not defined
+NameError: name 'meantemp1900' is not defined
+

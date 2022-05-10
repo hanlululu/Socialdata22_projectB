@@ -1,11 +1,11 @@
-# Welcome to your Jupyter Book
+# **Climate Change Visualisations**
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Welcome to a little world of visualisations on the most important topic of the 21st century: **Climate Change**.
 
-Check out the content pages bundled with this sample book to see more.
+It will guide you through: The *what* of climate change, the *why* of causes and the *who* of the responsibility.
 
+We invite you to begin your exploration:
 ```{tableofcontents}
 ```
+
+![](https://upload.wikimedia.org/wikipedia/commons/7/7e/The_Earth_seen_from_Apollo_17_with_white_background.jpg)

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to your Jupyter Book &#8212; Climate change in CO2 emissions</title>
+    <title>Climate Change Visualisations &#8212; Climate Change</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown Files" href="markdown.html" />
+    <link rel="next" title="1. Global Warming" href="keyplots_globalwarm.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -80,45 +80,49 @@ const thebe_selector_output = ".output, .cell_output"
         
       
       
-      <img src="_static/logo2.png" class="logo" alt="logo">
+      <img src="_static/logo2.jpeg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Climate change in CO2 emissions</h1>
+      <h1 class="site-logo" id="site-title">Climate Change</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Søg i denne bog ..." aria-label="Søg i denne bog ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 current">
   <a class="reference internal" href="#">
-   Welcome to your Jupyter Book
+   Climate Change Visualisations
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   Markdown Files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="CO2.html">
+  <a class="reference internal" href="keyplots_globalwarm.html">
    <strong>
-    CO2 emissions and climate change
+    1. Global Warming
    </strong>
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks.html">
-   Content with notebooks
+  <a class="reference internal" href="CO2-Responsibility.html">
+   <strong>
+    2. Who is responsible?
+   </strong>
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown-notebooks.html">
-   Notebooks with MyST Markdown
+  <a class="reference internal" href="CO2-causes.html">
+   <strong>
+    3. Where do the emissions come from?
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Moving-forward2.html">
+   CO2 emissions in the future
   </a>
  </li>
 </ul>
@@ -146,8 +150,8 @@ const thebe_selector_output = ".output, .cell_output"
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Skift navigation" aria-controls="site-navigation"
+                title="Skift navigation" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -155,7 +159,7 @@ const thebe_selector_output = ".output, .cell_output"
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download denne side"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
@@ -163,10 +167,10 @@ const thebe_selector_output = ".output, .cell_output"
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Download kildefil" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Udskriv til PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -179,12 +183,12 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
+                data-toggle="tooltip" data-placement="left" title="Kildelager"><i
+                    class="fab fa-github"></i>lager</button></a>
         <a class="issues-button"
             href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Åbn et problem"><i class="fas fa-lightbulb"></i>åbent nummer</button></a>
         
     </div>
 </div>
@@ -192,8 +196,8 @@ const thebe_selector_output = ".output, .cell_output"
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fuldskærmstilstand"
+        title="Fuldskærmstilstand"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -210,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Welcome to your Jupyter Book</h1>
+                <h1>Climate Change Visualisations</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -221,21 +225,21 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="welcome-to-your-jupyter-book">
-<h1>Welcome to your Jupyter Book<a class="headerlink" href="#welcome-to-your-jupyter-book" title="Permalink to this headline">¶</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="climate-change-visualisations">
+<h1><strong>Climate Change Visualisations</strong><a class="headerlink" href="#climate-change-visualisations" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to a little world of visualisations on the most important topic of the 21st century: <strong>Climate Change</strong>.</p>
+<p>It will guide you through: The <em>what</em> of climate change, the <em>why</em> of causes and the <em>who</em> of the responsibility.</p>
+<p>We invite you to begin your exploration:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CO2.html"><strong>CO2 emissions and climate change</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keyplots_globalwarm.html"><strong>1. Global Warming</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="CO2-Responsibility.html"><strong>2. Who is responsible?</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="CO2-causes.html"><strong>3. Where do the emissions come from?</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Moving-forward2.html">CO2 emissions in the future</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Moving-forward2.html#how-about-the-global-temperature">How about the global temperature?</a></li>
 </ul>
 </div>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/The_Earth_seen_from_Apollo_17_with_white_background.jpg" /></p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -263,10 +267,10 @@ It does not go in-depth into any particular topic - check out <a class="referenc
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="markdown.html" title="next page">
+    <a class='right-next' id="next-link" href="keyplots_globalwarm.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown Files</p>
+        <p class="prev-next-title"><strong>1. Global Warming</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -277,9 +281,9 @@ It does not go in-depth into any particular topic - check out <a class="referenc
     <footer class="footer">
   <p>
     
-      By Kathrine, David, Hanlu<br/>
+      Ved Kathrine Schultz-Nielsen, David Ribberholt Ipsen, Hanlu He<br/>
     
-        &copy; Copyright 2021.<br/>
+        &copy; ophavsret 2021.<br/>
   </p>
 </footer>
 </main>
