@@ -2,7 +2,7 @@
 
 Welcome to a little world of visualisations on the most important topic of the 21st century: **Climate Change**.
 
-It will guide you through: The *what*, the *why* and the *who*.
+It will guide you through: The *what* of climate change, the *why* of causes and the *who* of the responsibility.
 
 We invite you to begin your exploration:
 ```{tableofcontents}
