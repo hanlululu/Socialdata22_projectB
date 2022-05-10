@@ -4,8 +4,9 @@ Welcome to a little world of visualisations on the most important topic of the 2
 
 It will guide you through: The *what* of climate change, the *why* of causes, the *who* of the responsibility and the *how* of the state of the near future.
 
+All figures on this webpage are interactive 🤩 so you can get more information by mouse-over, click, zoom etc. For in-depth details on the code see the explainer notebook as [.ipynb](https://github.com/hanlululu/Socialdata_ProjectB/blob/main/Explainer_notebook.ipynb) or [.html](https://github.com/hanlululu/Socialdata_ProjectB/blob/main/Explainer_notebook.html).
 
-All figures on this webpage are interactive 🤩 so you can get more information by mouse-over, click, zoom etc. We invite you to begin your exploration:
+We invite you to begin your exploration:
 ```{tableofcontents}
 ```
 
